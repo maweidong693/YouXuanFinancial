@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acBgColor"
+    tools:context=".main.deal.buy.BuyActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ab_buy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_75"
+        android:background="@drawable/bg_money_mangement"
+        app:elevation="@dimen/dp_0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/by_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp_30"
+            android:minHeight="?attr/actionBarSize"
+            android:navigationIcon="@mipmap/ic_back_white"
+            app:navigationIcon="@mipmap/ic_back_white"
+            tools:targetApi="lollipop">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="@string/buyIn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_19"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tb_buy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_36"
+        android:layout_below="@id/ab_buy"
+        app:tabIndicatorColor="@color/themeColor"
+        app:tabIndicatorFullWidth="false"
+        app:tabMinWidth="@dimen/dp_70"
+        app:tabSelectedTextColor="@color/themeColor"
+        app:tabTextColor="@color/hintTextColor" />
+
+    <include
+        android:id="@+id/v_line"
+        layout="@layout/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/tb_buy" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_buy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/v_line"/>
+
+</RelativeLayout>

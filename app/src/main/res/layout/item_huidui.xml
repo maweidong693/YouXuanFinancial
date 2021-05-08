@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_46"
+    android:paddingStart="@dimen/dp_17"
+    android:paddingEnd="@dimen/dp_17">
+
+    <TextView
+        android:id="@+id/tv_huidui_money_type"
+        style="@style/huiduiHintTextStyle"
+        android:text="@string/moneyType" />
+
+    <TextView
+        android:id="@+id/tv_huidui_finish_money"
+        style="@style/huiduiHintTextStyle"
+        android:layout_width="@dimen/dp_40"
+        android:singleLine="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/finishMoneyHuilv"
+        android:textColor="#3B8647" />
+
+    <TextView
+        android:id="@+id/tv_huidui_jiehuihuilv"
+        style="@style/huiduiHintTextStyle"
+        android:layout_marginEnd="@dimen/dp_45"
+        android:layout_width="@dimen/dp_40"
+        android:singleLine="true"
+        android:layout_toStartOf="@id/tv_huidui_finish_money"
+        android:text="@string/finishMoneyHuilv"
+        android:textColor="#3B8647" />
+
+    <TextView
+        android:id="@+id/tv_huidui_gouhuihuilv"
+        style="@style/huiduiHintTextStyle"
+        android:layout_marginEnd="@dimen/dp_45"
+        android:layout_width="@dimen/dp_40"
+        android:singleLine="true"
+        android:layout_toStartOf="@id/tv_huidui_jiehuihuilv"
+        android:text="@string/gouhuihuilv"
+        android:textColor="#3B8647" />
+
+    <include
+        layout="@layout/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

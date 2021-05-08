@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_46"
+    android:paddingStart="@dimen/dp_17"
+    android:paddingEnd="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_huidui_money_type"
+        style="@style/huiduiHintTextStyle"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/dp_80"
+        android:singleLine="true"
+        android:text="@string/moneyType"
+        android:textColor="@color/themeColor" />
+
+    <TextView
+        android:id="@+id/tv_huidui_finish_money"
+        style="@style/huiduiHintTextStyle"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_toStartOf="@id/tv_huidui_jiehuihuilv"
+        android:text="@string/finishMoneyHuilv"
+        android:textColor="@color/themeColor" />
+
+    <TextView
+        android:id="@+id/tv_huidui_jiehuihuilv"
+        style="@style/huiduiHintTextStyle"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:layout_toStartOf="@id/tv_sell_out"
+        android:gravity="end"
+        android:minWidth="@dimen/dp_50"
+        android:singleLine="true"
+        android:text="@string/finishMoneyHuilv"
+        android:textColor="@color/themeColor" />
+
+    <TextView
+        android:id="@+id/tv_huidui_gouhuihuilv"
+        style="@style/huiduiHintTextStyle"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_toStartOf="@id/tv_huidui_finish_money"
+        android:text="@string/gouhuihuilv"
+        android:textColor="@color/themeColor" />
+
+    <TextView
+        android:id="@+id/tv_sell_out"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_30"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_confirm"
+        android:gravity="center"
+        android:text="@string/sellOut"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_12" />
+
+    <include
+        layout="@layout/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

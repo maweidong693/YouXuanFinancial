@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acBgColor"
+    tools:context=".main.management.huidui.HuiduiActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ab_huidui"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_75"
+        android:background="@drawable/bg_money_mangement"
+        app:elevation="@dimen/dp_0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/huidui_list_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp_30"
+            android:minHeight="?attr/actionBarSize"
+            android:navigationIcon="@mipmap/ic_back_white"
+            app:navigationIcon="@mipmap/ic_back_white"
+            tools:targetApi="lollipop">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="@string/huidui"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_19"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_huidui"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_below="@id/ab_huidui"
+        android:paddingStart="@dimen/dp_17"
+        android:paddingEnd="@dimen/dp_17">
+
+        <TextView
+            android:id="@+id/tv_huidui_money_type_hint"
+            android:text="@string/moneyType"
+            style="@style/huiduiHintTextStyle" />
+
+        <TextView
+            android:id="@+id/tv_huidui_finish_money_hint"
+            android:text="@string/finishMoneyHuilv"
+            style="@style/huiduiHintTextStyle"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/tv_huidui_jiehuihuilv_hint"
+            android:text="@string/finishMoneyHuilv"
+            style="@style/huiduiHintTextStyle"
+            android:layout_toStartOf="@id/tv_huidui_finish_money_hint"
+            android:layout_marginEnd="@dimen/dp_35"/>
+
+        <TextView
+            android:id="@+id/tv_huidui_gouhuihuilv_hint"
+            android:text="@string/gouhuihuilv"
+            style="@style/huiduiHintTextStyle"
+            android:layout_toStartOf="@id/tv_huidui_jiehuihuilv_hint"
+            android:layout_marginEnd="@dimen/dp_35"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            layout="@layout/view_line"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_huidui_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_huidui">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_huidui_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

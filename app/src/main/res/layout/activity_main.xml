@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg_navigation" />
+
+    <RadioGroup
+        android:id="@+id/rg_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:background="@color/whiteBg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/main_home_selector"
+            android:text="@string/huidui" />
+
+        <RadioButton
+            android:id="@+id/rb_deal"
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/main_deal_selector"
+            android:text="@string/deal" />
+
+        <RadioButton
+            android:id="@+id/rb_money"
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/main_money_selector"
+            android:text="@string/moneyManagement" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/main_mine_selector"
+            android:text="@string/mine" />
+
+    </RadioGroup>
+
+</RelativeLayout>

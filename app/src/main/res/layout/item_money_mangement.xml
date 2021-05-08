@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_80"
+    android:layout_below="@id/cl_money_hint"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/tv_money_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="middle"
+        android:maxWidth="@dimen/dp_90"
+        android:singleLine="true"
+        android:text="@string/test"
+        android:textColor="@color/percentColor"
+        android:textSize="@dimen/dp_22"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_product_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_3"
+        android:text="@string/percentSign"
+        android:textColor="@color/percentColor"
+        android:textSize="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="@id/tv_money_percent"
+        app:layout_constraintStart_toEndOf="@id/tv_money_percent" />
+
+    <TextView
+        android:id="@+id/text_product_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/rateOfReturn"
+        android:textColor="@color/hintTextColor"
+        android:textSize="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_money_percent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_money_percent" />
+
+    <include
+        android:id="@+id/v_1"
+        layout="@layout/view_line"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_41"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_product_hint"
+        app:layout_constraintStart_toEndOf="@id/text5"
+        app:layout_constraintTop_toTopOf="@+id/tv_money_percent" />
+
+    <TextView
+        android:id="@+id/tv_money_management_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/testFont"
+        android:textColor="@color/alwaysTextColor"
+        android:textSize="@dimen/dp_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/v_1"
+        app:layout_constraintTop_toTopOf="@+id/v_1" />
+
+    <TextView
+        android:id="@+id/tv_money_management_target_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_money_target"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:text="@string/testFont"
+        android:textColor="@color/hintTextColor"
+        android:textSize="@dimen/dp_9"
+        app:layout_constraintBottom_toBottomOf="@+id/v_1"
+        app:layout_constraintStart_toStartOf="@id/tv_money_management_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_money_management_name" />
+
+    <TextView
+        android:id="@+id/tv_money_management_target_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:background="@drawable/bg_money_target"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:text="@string/testFont"
+        android:textColor="@color/hintTextColor"
+        android:textSize="@dimen/dp_9"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_money_management_target_1"
+        app:layout_constraintStart_toEndOf="@+id/tv_money_management_target_1"
+        app:layout_constraintTop_toTopOf="@+id/tv_money_management_target_1" />
+
+    <TextView
+        android:id="@+id/tv_money_management_target_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:background="@drawable/bg_money_target"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:text="@string/testFont"
+        android:textColor="@color/hintTextColor"
+        android:textSize="@dimen/dp_9"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_money_management_target_2"
+        app:layout_constraintStart_toEndOf="@+id/tv_money_management_target_2"
+        app:layout_constraintTop_toTopOf="@+id/tv_money_management_target_2" />
+
+    <TextView
+        android:id="@+id/tv_money_management_target_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:background="@drawable/bg_money_target"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:text="@string/testFont"
+        android:textColor="@color/hintTextColor"
+        android:textSize="@dimen/dp_9"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_money_management_target_3"
+        app:layout_constraintStart_toEndOf="@+id/tv_money_management_target_3"
+        app:layout_constraintTop_toTopOf="@+id/tv_money_management_target_3" />
+
+    <include
+        layout="@layout/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".main.management.MoneyManagementFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_168"
+        android:background="@drawable/bg_money_mangement"
+        android:paddingTop="@dimen/dp_35">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/moneyManagement"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_money_huoqi"
+            style="@style/moneyMangermentTag"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="24dp"
+            android:drawableTop="@mipmap/huoqi"
+            android:text="@string/huoqi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_money_dingqi"
+            style="@style/moneyMangermentTag"
+            android:drawableTop="@mipmap/dingqi"
+            android:text="@string/dingqi"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_money_huoqi"
+            app:layout_constraintEnd_toStartOf="@+id/tv_money_huidui"
+            app:layout_constraintStart_toEndOf="@+id/tv_money_huoqi"
+            app:layout_constraintTop_toTopOf="@+id/tv_money_huoqi" />
+
+        <TextView
+            android:id="@+id/tv_money_huidui"
+            style="@style/moneyMangermentTag"
+            android:layout_marginEnd="45dp"
+            android:drawableTop="@mipmap/huidui"
+            android:text="@string/huidui"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_money_dingqi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_money_dingqi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/cl_money_hint"
+        layout="@layout/layout_product_hint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_below="@id/cl_money" />
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_money_mangerment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cl_money_hint">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_money_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/dp_80"-->
+    <!--        android:layout_below="@id/cl_money_hint"-->
+    <!--        android:layout_marginStart="@dimen/dp_16"-->
+    <!--        android:layout_marginEnd="@dimen/dp_16">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_money_percent"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="16dp"-->
+    <!--            android:ellipsize="middle"-->
+    <!--            android:maxWidth="@dimen/dp_90"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="@string/test"-->
+    <!--            android:textColor="@color/percentColor"-->
+    <!--            android:textSize="@dimen/dp_22"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/textView4"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text5"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginBottom="@dimen/dp_3"-->
+    <!--            android:text="@string/percentSign"-->
+    <!--            android:textColor="@color/percentColor"-->
+    <!--            android:textSize="@dimen/dp_12"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/tv_money_percent"-->
+    <!--            app:layout_constraintStart_toEndOf="@id/tv_money_percent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView4"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginBottom="16dp"-->
+    <!--            android:text="@string/rateOfReturn"-->
+    <!--            android:textColor="@color/hintTextColor"-->
+    <!--            android:textSize="@dimen/dp_10"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="@+id/tv_money_percent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/tv_money_percent" />-->
+
+    <!--        <include-->
+    <!--            android:id="@+id/v_1"-->
+    <!--            layout="@layout/view_line"-->
+    <!--            android:layout_width="@dimen/dp_1"-->
+    <!--            android:layout_height="@dimen/dp_41"-->
+    <!--            android:layout_marginStart="25dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@+id/textView4"-->
+    <!--            app:layout_constraintStart_toEndOf="@id/text5"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/tv_money_percent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_money_management_name"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="@dimen/dp_10"-->
+    <!--            android:text="@string/testFont"-->
+    <!--            android:textColor="@color/alwaysTextColor"-->
+    <!--            android:textSize="@dimen/dp_14"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintStart_toEndOf="@id/v_1"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/v_1" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_money_management_target_1"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/bg_money_target"-->
+    <!--            android:paddingStart="@dimen/dp_5"-->
+    <!--            android:paddingEnd="@dimen/dp_5"-->
+    <!--            android:text="@string/testFont"-->
+    <!--            android:textColor="@color/hintTextColor"-->
+    <!--            android:textSize="@dimen/dp_9"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@+id/v_1"-->
+    <!--            app:layout_constraintStart_toStartOf="@id/tv_money_management_name"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/tv_money_management_name" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_money_management_target_2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="7dp"-->
+    <!--            android:background="@drawable/bg_money_target"-->
+    <!--            android:paddingStart="@dimen/dp_5"-->
+    <!--            android:paddingEnd="@dimen/dp_5"-->
+    <!--            android:text="@string/testFont"-->
+    <!--            android:textColor="@color/hintTextColor"-->
+    <!--            android:textSize="@dimen/dp_9"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@+id/tv_money_management_target_1"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/tv_money_management_target_1"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/tv_money_management_target_1" />-->
+
+    <!--        <include-->
+    <!--            layout="@layout/view_line"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/dp_1"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</RelativeLayout>

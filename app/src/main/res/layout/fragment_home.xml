@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".main.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_huidui"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_168"
+        android:background="@mipmap/bg_huidui"
+        android:paddingTop="@dimen/dp_35">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/huidui"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_rmb_buy"
+            style="@style/moneyMangermentTag"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="24dp"
+            android:drawableTop="@mipmap/ic_rmb_buy"
+            android:text="@string/rmbBuy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_out_b_finish"
+            style="@style/moneyMangermentTag"
+            android:drawableTop="@mipmap/ic_waibi_buy"
+            android:text="@string/outFinish"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rmb_buy"
+            app:layout_constraintEnd_toStartOf="@+id/tv_home_deal_detail"
+            app:layout_constraintStart_toEndOf="@+id/tv_rmb_buy"
+            app:layout_constraintTop_toTopOf="@+id/tv_rmb_buy" />
+
+        <TextView
+            android:id="@+id/tv_home_deal_detail"
+            style="@style/moneyMangermentTag"
+            android:layout_marginEnd="45dp"
+            android:drawableTop="@mipmap/ic_home_deal_deail"
+            android:text="@string/dealDetail"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_out_b_finish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_out_b_finish" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_huidui"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_below="@id/cl_huidui"
+        android:paddingStart="@dimen/dp_17"
+        android:paddingEnd="@dimen/dp_17">
+
+        <TextView
+            android:id="@+id/tv_huidui_money_type_hint"
+            android:text="@string/moneyType"
+            style="@style/huiduiHintTextStyle" />
+
+        <TextView
+            android:id="@+id/tv_huidui_finish_money_hint"
+            android:text="@string/finishMoneyHuilv"
+            style="@style/huiduiHintTextStyle"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/tv_huidui_jiehuihuilv_hint"
+            android:text="@string/finishMoneyHuilv"
+            style="@style/huiduiHintTextStyle"
+            android:layout_toStartOf="@id/tv_huidui_finish_money_hint"
+            android:layout_marginEnd="@dimen/dp_35"/>
+
+        <TextView
+            android:id="@+id/tv_huidui_gouhuihuilv_hint"
+            android:text="@string/gouhuihuilv"
+            style="@style/huiduiHintTextStyle"
+            android:layout_toStartOf="@id/tv_huidui_jiehuihuilv_hint"
+            android:layout_marginEnd="@dimen/dp_35"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            layout="@layout/view_line"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_hui"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_huidui"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_huidui"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>
